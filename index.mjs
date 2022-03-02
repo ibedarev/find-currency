@@ -33,7 +33,7 @@ const check = async () => {
           const point = data.payload?.clusters?.[0]?.points[0];
           if (point) {
             const limits = point.limits
-              .map((limit) => `${limit.currency}:${limit.max}`)
+              .map((limit) => `${limit.currency}:${limit.amount}`)
               .join("\n");
 
             console.log(`${point.address}\n${limits}`);
